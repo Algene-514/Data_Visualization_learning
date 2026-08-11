@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from random import choice
 class RandomWalk:
     """一个生成随机漫步数据的类"""
-    def __init__(self,num_points = 5000):
+    def __init__(self,num_points = 10000):
         """初始化随机漫步的属性"""
         self.num_points = num_points
         self.x_value = [0]
@@ -11,10 +11,10 @@ class RandomWalk:
         """计算随机漫步包含的所有点"""
         while len(self.x_value) < self.num_points:
             x_direction = choice([-1,1])
-            x_distance = choice([0,1,2,3,4,5,6,7,8,9,10])
+            x_distance = choice([0,1,2,3,4])
             x_step = x_direction * x_distance
             y_direction = choice([-1,1])
-            y_distance = choice([0,1,2,3,4,5,6,7,8,9,10])
+            y_distance = choice([0,1,2,3,4])
             y_step = y_direction * y_distance
             if x_step == 0  and y_step == 0:
                 continue
@@ -35,8 +35,8 @@ while True:
     fig,ax = plt.subplots(figsize=(10,6))
     point_numbers = range(rw.num_points)
     # 给点着色
-    ax.scatter(rw.x_value,rw.y_value,c =point_numbers
-                ,cmap=plt.cm.Blues,edgecolors='none',s=4)
+    ax.plot(rw.x_value,rw.y_value,c = "Blue",linewidth=0.1)
+    plt.show()
     # 突出起点和终点
     # 起点
     ax.scatter(0,0,c="green",edgecolors='none',s=50)
