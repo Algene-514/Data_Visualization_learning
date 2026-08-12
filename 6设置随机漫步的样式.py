@@ -51,3 +51,4 @@ while True:
     if keep_running == "n":
         print("随机漫步程序已结束")
         break
+

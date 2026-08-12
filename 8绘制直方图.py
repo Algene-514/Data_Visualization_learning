@@ -9,27 +9,33 @@ class Die:
     def roll(self):
         """返回一个位于1和骰子之间的随机值"""
         return randint(1,self.num_sides)
+
 die = Die()
-results = []
+results = [] # 用来存储随机数结果的列表
 for roll_num in range(10000):
     result = die.roll()
     results.append(result)
-frequencies = []
+frequencies = [] # 用来统计数字出现次数的列表
 for value in range(1,die.num_sides+1):
     frequency = results.count(value)
     frequencies.append(frequency)
 print(frequencies)
 
 # 对结果进行可视化
-x_values = list(range(1,die.num_sides+1))
+# Plotly不能直接接收函数range的结果，因此需要使用函数list()将其转化为列表
+x_values = list(range(1,die.num_sides+1))   # 用来显示x轴的值的列表
 
-data = [Bar(x=x_values, y=frequencies)]
+data = [Bar(x=x_values, y=frequencies)] #用来存储绘图数据的列表
+
 # Bar()用于绘制条形图的数据集，需要一个存储x值的列表和一个存储y值的列表
 # 这个类必须在方括号内，因为数据集可能包含多个元素
+
+# 设置样式
 x_axis_config = {'title':'结果'}
 y_axis_config = {'title':'结果的频率'}
 my_layout = Layout(title='掷骰子10000次的结果',
                    xaxis=x_axis_config, yaxis=y_axis_config)
 # 类Layout()返回一个指定图标布局和配置的对象
+
 offline.plot({'data':data,'layout':my_layout},filename='d6.html')
 # offline.plot()在这里用来生成图表

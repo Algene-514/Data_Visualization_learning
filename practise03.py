@@ -4,5 +4,3 @@ import matplotlib.pyplot as plt
 # fig,ax = plt.subplots()
 # ax.scatter(x_values,y_values,color='blue',s=10)
 # plt.show()
-
-

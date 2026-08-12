@@ -27,6 +27,7 @@ class RandomWalk:
 
 
 
+
 # 只要程序处于活动状态，就不断地模拟随机漫步
 while True:
     rw = RandomWalk()

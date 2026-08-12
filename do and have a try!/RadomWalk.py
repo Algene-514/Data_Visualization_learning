@@ -45,3 +45,4 @@ while True:
     out = input("是否要继续随机漫步？(y/n)")
     if out == "n":
         break
+
