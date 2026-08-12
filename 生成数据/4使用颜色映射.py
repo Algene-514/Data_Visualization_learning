@@ -18,7 +18,7 @@ ax.set_ylabel("值的平方",fontsize = 10)
 ax.tick_params(axis='both',which ="major",labelsize=10)
 # 自动保存图表
 # 第一个参数指定要以什么文件名保存图表，第二个参数指定将图表多余的空白区域裁掉
-plt.savefig('squares_plot.png',bbox_inches='tight')
+plt.savefig('squares_plot.png', bbox_inches='tight')
 plt.show()
 
 

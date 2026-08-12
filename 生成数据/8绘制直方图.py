@@ -37,5 +37,5 @@ my_layout = Layout(title='掷骰子10000次的结果',
                    xaxis=x_axis_config, yaxis=y_axis_config)
 # 类Layout()返回一个指定图标布局和配置的对象
 
-offline.plot({'data':data,'layout':my_layout},filename='d6.html')
+offline.plot({'data':data,'layout':my_layout}, filename='d6.html')
 # offline.plot()在这里用来生成图表

@@ -27,4 +27,4 @@ x_axis_config = {'title':'结果','dtick':1} # dtick指定了x轴显示的刻度
 y_axis_config = {'title':'结果的频率'}
 my_layout = Layout(title='掷两个D6骰子10000次的结果',
                    xaxis=x_axis_config, yaxis=y_axis_config)
-offline.plot({'data':data,'layout':my_layout},filename='d6.html')
+offline.plot({'data':data,'layout':my_layout}, filename='d6.html')
